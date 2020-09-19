@@ -29,6 +29,7 @@ class _ArticlePageState extends State<ArticlePage> {
       body: Container(
         child: WebView(
           initialUrl: widget.url,
+          javascriptMode: JavascriptMode.unrestricted,
           onWebViewCreated: ((WebViewController webViewController) {
             _completer.complete(webViewController);
           }),
